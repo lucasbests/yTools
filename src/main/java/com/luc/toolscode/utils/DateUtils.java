@@ -39,7 +39,7 @@ public class DateUtils extends DateUtil{
         Calendar calendar = Calendar.getInstance();
 
         List<String> result = new ArrayList<>();
-        while (beginTime.before(endTime)){
+        while (beginTime.getTime() <= endTime.getTime()){
             result.add(format.format(beginTime));
 
             calendar.setTime(beginTime);
